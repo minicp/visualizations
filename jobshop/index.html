@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./vendor/css/font-awesome.min.css">
+    <title>JobShop Visualizer</title>
+</head>
+<body>
+    <div class="head-container">
+        <div class="lead-title">
+            <!-- <h5>JOBSHOP VISUALIZATION</h5> -->
+            <div>
+                <span>JOBSHOP  VISUALIZATION</span>
+            </div>
+            <div>
+                <!-- <button onclick="window.location.replace('../index.html')" class="btn" title="Go back"><i class="fa fa-arrow-left"></i></button> -->
+                <button onclick="window.location.reload()" id="refreshBtn" class="btn" title="Refresh screen"><i class="fa fa-refresh"></i></button>
+                <button class="btn run-solution" title="Run solution"><i class="fa fa-play"></i></button>
+                <button class="btn quick-run-solution" title="Display solution"><i class="fa fa-eye"></i></button>
+                <button class="btn hide-deadline-chart" title="Hide/Show chart"><i class="fa fa-line-chart"></i></button>
+                <button class="btn hidden" id="problemHiddenValidator"><i class="fa fa-validate"></i>HIDDEN VALIDATOR1</button>
+                <button class="btn hidden" id="solutionHiddenValidator"><i class="fa fa-validate"></i>HIDDEN VALIDATOR2</button>
+            </div>
+        </div>
+        <div class="right-legend-container">
+            <!-- DRAW DYNAMICALLY LEGEND HERE -->
+        </div>
+    </div>
+
+    <div class="uploader-zone">
+        <div class="form-container">
+            <form id="file-upload-form" class="uploader">
+                <input id="problem-upload" type="file" name="file" />
+                <label for="problem-upload" id="file-drag">
+                    <div id="start">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <div>Select a <b>problem</b> file or drag it here</div>
+                        <!-- <span id="file-upload-btn" class="btn">Select a file</span> -->
+                    </div>
+                </label>
+            </form>
+            <form id="solution-upload-form" class="uploader">
+                <input id="solution-upload" type="file" name="file" />
+                <label for="solution-upload" id="solution-drag">
+                    <div id="start">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <div>Select the <b>solution</b> or drag it here</div>
+                        <!-- <span id="solution-upload-btn" class="btn">Select a file</span> -->
+                    </div>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <div class="makespan">
+        <label for="" class="makel">
+            {{ insert joshop optimize make span here }}
+        </label>
+    </div>
+
+    <div class="job-space " id="canvas-container">
+        <div class="job-state">
+
+        </div>
+        <div class="job-draw dashed-container">
+            <canvas id="jobshop_canvas">
+
+            </canvas>
+        </div>
+    </div>
+
+    <div id="error-popup" class="alert-container d-none">
+        <div class="alert bounce-enter-active">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            {{ include error type here }}
+        </div>
+    </div>
+    
+    <footer class="container-fluid footer footer-result">
+        <div class="copyright">
+          &copy;&nbsp;<span>jobshop web-based visualization</span>
+        </div>
+    </footer>
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/fabric.min.js"></script>
+    <script src="./js/job_reader.js"></script>
+    <script src="./js/canvas_drawer.js"></script>
+    <script src="./js/drag_drop.js"></script>
+</body>
+</html>

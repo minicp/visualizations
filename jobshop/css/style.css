@@ -1,0 +1,575 @@
+/*==== Fonts importation ====*/
+@font-face {
+    font-family: "Nunito";
+    src: url("../vendor/fonts/Nunito-VariableFont_wght.woff") format("woff");
+}
+@font-face {
+    font-family: "Lobster Two";
+    src: url("../vendor/fonts/LobsterTwo-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Playball";
+    src: url("../vendor/fonts//Playball-Regular.ttf") format("woff");
+}
+
+/*==== Genral Styles =====*/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+/* ==========  Index styles ========== */
+
+
+#hero{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)) , url('../img/hero.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero-content{
+    text-align: center;
+}
+.hero-content h2{
+    font-family: 'Playball', cursive;
+    font-size: 3rem;
+    font-weight: bold;
+    color: lightseagreen;
+}
+.hero-content .describe, .hero-content .start-btn{
+    font-size: 1.2rem;
+}
+.hero-content .button-div{
+    margin-top: 12vh;
+}
+.hero-content .start-btn{
+    background-color: transparent;
+    border-color:white ;
+    padding: 0.5rem 2rem;
+    border-radius: 0.1rem;
+    transition: all .5s;
+    cursor: pointer;
+}
+.hero-content .start-btn:hover{
+    background-color: lightseagreen;
+    border: none;
+    transform: scale(1.08);
+    color: white;
+}
+
+/* Upload form styles */
+
+.form-container{
+    display: flex;
+    /* justify-content: space-around; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#form-div{
+    margin: 10vh 0;
+    /* height: 60vh; */
+    text-align: center;
+}
+#form-div h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Playball', cursive;
+  color: lightseagreen;
+  margin-bottom: .5rem;
+}
+
+#form-div p {
+  font-size: 1rem;
+  margin-bottom: 5rem;
+}
+
+.uploader{
+  display: block;
+  clear: both;
+  margin: 1.5em;
+  width: 100%;
+  max-width: 400px;
+}
+
+
+.uploader label {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-bottom: 5vh;
+  text-align: center;
+  background: whitesmoke;
+  border-radius: 7px;
+  /* border: 3px solid #eee; */
+  border: 2px dashed #ccc;
+  transition: all 0.2s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.uploader label:hover {
+  border-color: lightseagreen;
+}
+.uploader label.file-selected{
+    border-color: lightseagreen;
+    box-shadow: inset 0 0 0 4px #eee;
+}
+.uploader label.hover #start i.fa {
+  transform: scale(0.8);
+  opacity: 0.3;
+}
+.uploader #start {
+  float: left;
+  clear: both;
+  width: 100%;
+}
+.uploader #start.hidden {
+  display: none;
+}
+.uploader #start i.fa {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.uploader input[type=file] {
+  display: none;
+}
+.uploader div {
+  margin: 0 0 .5rem 0;
+  color: #5f6982;
+}
+.d-none{
+    display: none !important;
+}
+.uploader .btn, .visualize {
+  display: inline-block;
+  margin: 1rem 0;
+  font-size: 16px;
+  color: white;
+  border-radius: 0.2rem;
+  outline: none;
+  padding:0.5rem 1.5rem;
+  transition: all 0.2s ease-in-out;
+  background: lightseagreen;
+  border-color: lightseagreen;
+  cursor: pointer;
+}
+.btn {
+    display: inline-block;
+    /* margin: 1rem 0; */
+    font-size: 16px;
+    color: white;
+    border-radius: 0.2rem;
+    outline: none;
+    padding:0.4rem 1.35rem;
+    transition: all 0.2s ease-in-out;
+    background: lightseagreen;
+    border-color: lightseagreen;
+    cursor: pointer;
+  }
+
+/* Error section styles */
+.error-container{
+    width: 25vw;
+    margin-top: 2vh;
+}
+.error{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    border-radius: 6px;
+    border: 1px solid rgba(220, 53, 69, .5);
+    border-left: 4px solid #dc3545;
+}
+.error .fa-info{
+    font-size: 1.5rem;
+    color: #dc3545;
+}
+.error .error-msg{
+    padding-left: 1rem;
+}
+
+/* Footer styles */
+.footer {
+    height: 6vh;
+    background-color: black;
+    color:  #fff;
+    text-align: center;
+    padding: 0;
+}
+.footer .copyright{
+    margin: auto 0;
+    padding: 1.2vh 0;
+    text-align: center;
+}
+.footer .copyright span{
+    font-family: 'Playball', cursive;
+    font-size: 16px;
+    color: white;
+}
+
+/* ==========  Results styles ========== */
+
+.head-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+/* Styles fr Legend */
+.right-legend-container{
+    display: flex;
+}
+.legend-container{
+    margin-right: 0.2em;
+    width: auto;
+    border: 1px dotted lightsalmon;
+}
+.legend-container .legend-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.5vh;
+    margin: 0;
+    padding: 0 .5rem;
+}
+.legend-row .machine-color{
+    width: 2rem;
+    height: .8rem;
+    background-color: green;
+    border-radius: 2px;
+}
+.legend-row .machine-label{
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: .2rem;
+}
+
+.lead-title{
+    display: flex;
+    flex-direction: column;
+}
+
+.lead-title h5{
+    font-family: 'Playball', cursive;
+    color: lightseagreen;
+}
+.all-jobshop, .all-machine{
+    color: black;
+}
+.jobshop, .machine{
+    width: calc(50vw - 4em);
+    padding: 1rem;
+}
+.jobshop .job-title, .machine .machineTitle{
+    width: 7vw;
+    /* padding: .5rem 0; */
+    /* border: 2px solid  #ddd; */
+    border-bottom: none;
+    text-align: center;
+    color: white;
+    border-top-left-radius: .3em;
+    border-top-right-radius: .3em;
+    background-color: #798299;
+}
+.jobshop .job-title p, .machine .machineTitle p{
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-size: 14px;
+}
+.jobshop .all-tasks, .machine .all-tasks{
+    padding: .2em;
+    margin: auto;
+    border-top-right-radius: .3em;
+    border-bottom-left-radius: .3em;
+    border-bottom-right-radius: .3em;
+    background-color: #798299;
+}
+.jobshop .all-tasks .task, .machine .all-tasks .task{
+    display: inline-block;
+    width: 10vw;
+    height: 1.8rem;
+    background-color: aquamarine;
+    text-align: center;
+    font-size: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 .2vw;
+    border-radius: .3em;
+    transition: all .2s ease-in;
+}
+
+/* POPUP ERROR INTERFACE */
+/* The alert message box */
+.alert-container{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.alert {
+  padding: 20px;
+  background-color: #f05f54; /* Red */
+  color: white;
+  margin-bottom: 50px;
+  width: 50vw;
+  transition: all 1s;
+}
+  
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+  
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
+
+/* animation  module */
+.bounce-enter-active{
+  animation: bounce-in .5s;
+}
+
+.bounce-leave-active{
+  animation: bounce-out .5s;
+  display: none !important;
+}
+
+@keyframes bounce-in{
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce-out{
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* Drag and drop style */
+.highlight {
+  border-color: orangered !important;
+}
+
+.uploaded {
+  border-color: lightseagreen !important;
+}
+
+/* Drawer jobshopnew style */
+.job-space{
+    padding: 1em;
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #5f6982;
+}
+.job-box{
+    margin-right: 1em;
+    border-radius: .5em;
+    width: calc(((100vw - 4rem)/2));
+    min-height: 100%;
+    border: 2px dashed whitesmoke;
+}
+
+/* ANIMATION STYLE */
+.job-title, .all-tasks{
+  transition: all .3s ease-in;
+  user-select: none;
+}
+*{
+  user-select: none;
+}
+.jobshop:hover .job-title, .jobshop:hover .all-tasks{
+  background-color: #aaa5a5;
+  cursor: pointer;
+}
+.jobshop:hover .all-tasks .task{
+  /* background-color: #aaa5a5 !important; */
+  opacity: 0.8 !important;
+  cursor: pointer;
+}
+
+/* TOOLTIP ANAIMATION */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #263238;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 5px;
+ 
+  position: absolute;
+  top: -0.2em;
+  right: 1em;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; 
+  left: 10%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #263238 transparent transparent transparent;
+}
+
+/* UPLOAD IN PROBLEME INTERFACE - DRAWER STYLE */
+.sol-drawer{
+  background-color: transparent !important;
+  border-color: transparent !important;
+  background-color: #5a647c !important;
+  padding: 0.7em;
+}
+.wb-contrast{
+  color: white !important;
+}
+.solution-area{
+  display: flex;
+  align-items: center;
+  /* background-color: red; */
+  justify-content: center;
+  height: 100%;
+}
+#solutionUploader2{
+  display: none;
+}
+
+/* =============================== */
+/* VERSION 2 - ONE PAGE STYLE MIND */
+/* =============================== */
+.uploader-zone{
+  /* height: 7em; */
+  background-color: #5f6982;
+  /* background-color: red; */
+}
+.uploader-zone .form-container{
+  flex-wrap: nowrap;
+}
+.uploader-zone .form-container .uploader{
+  display: block;
+  clear: both;
+  /* margin: 1.5em; */
+  width: inherit;
+  max-width: none;
+  background-color: transparent !important;
+  width: 50%;
+}
+.uploader-zone .form-container .uploader #start i.fa {
+  font-size: 1rem;
+  margin: 1rem 0;
+  transition: all 0.2s ease-in-out;
+}
+.uploader-zone .form-container .uploader div {
+  margin: 0 0 .5rem 0;
+  color: #ffffff;
+}
+
+.uploader-zone .form-container .uploader label {
+  float: left;
+  clear: both;
+  width: 100%;
+  margin-bottom: 0;
+  text-align: center;
+  background: transparent;
+  border-radius: 7px;
+  border: 2px dashed #ccc7;
+  transition: all 0.2s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer !important;
+}
+.uploader-zone .form-container .uploader label:hover{
+  background-color: #687188;
+}
+.dashed-container{
+  /* border: 2px dashed #ccc7; */
+  /* margin: 1.5em; */
+  margin-left: 0.4em;
+}
+.hidden{
+  display: none !important;
+}
+.makespan{
+  background-color: #5f6982;
+  text-align: center;
+  padding: 0.5em 0;
+}
+.makespan label{
+  background-color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+.makespan{
+  display: none;
+}
