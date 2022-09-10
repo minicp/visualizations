@@ -14,10 +14,11 @@
         <div class="lead-title">
             <!-- <h5>JOBSHOP VISUALIZATION</h5> -->
             <div>
+                <!-- <button class="back-btn"><i class="fa fa-arrow-left"></i></button> -->
                 <span>JOBSHOP  VISUALIZATION</span>
             </div>
             <div>
-                <!-- <button onclick="window.location.replace('../index.html')" class="btn" title="Go back"><i class="fa fa-arrow-left"></i></button> -->
+                <button onclick="goToMain()" class="btn" title="Go back"><i class="fa fa-arrow-left"></i></button>
                 <button onclick="window.location.reload()" id="refreshBtn" class="btn" title="Refresh screen"><i class="fa fa-refresh"></i></button>
                 <button class="btn run-solution" title="Run solution"><i class="fa fa-play"></i></button>
                 <button class="btn quick-run-solution" title="Display solution"><i class="fa fa-eye"></i></button>
@@ -27,6 +28,7 @@
             </div>
         </div>
         <div class="right-legend-container">
+            <button onclick="goToGit()" class="btn btn-help pr6" title="Open readme.md">README</i></button>
             <!-- DRAW DYNAMICALLY LEGEND HERE -->
         </div>
     </div>
@@ -82,7 +84,7 @@
     
     <footer class="container-fluid footer footer-result">
         <div class="copyright">
-          &copy;&nbsp;<span>MOOC EDX CP Team</span>
+          &copy;&nbsp;<span>jobshop web-based visualization</span>
         </div>
     </footer>
     <script src="./vendor/jquery.min.js"></script>
@@ -90,5 +92,20 @@
     <script src="./js/job_reader.js"></script>
     <script src="./js/canvas_drawer.js"></script>
     <script src="./js/drag_drop.js"></script>
+    <script>
+        function goToMain() {
+            let a = document.createElement('a');
+            a.setAttribute('href', '../')
+            a.click()
+            a.remove()
+        } 
+        function goToGit () {
+            let a = document.createElement('a');
+            a.setAttribute('href', './readme.html')
+            a.setAttribute('target', '_bank')
+            a.click()
+            a.remove()
+        }
+    </script>
 </body>
 </html>

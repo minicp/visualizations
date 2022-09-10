@@ -177,6 +177,20 @@ a:hover{
   border-color: lightseagreen;
   cursor: pointer;
 }
+.back-btn{
+  margin-bottom: .2em; 
+  background-color: #fff; 
+  color:#000; 
+  border: none;
+  border-color: #fff;
+  border-radius: 0.2rem;
+  cursor: pointer;
+
+}
+.pr6{
+  position: relative;
+  top: .6em;
+}
 .btn {
     display: inline-block;
     /* margin: 1rem 0; */
@@ -189,6 +203,10 @@ a:hover{
     background: lightseagreen;
     border-color: lightseagreen;
     cursor: pointer;
+  }
+  .btn-help{
+    background: #6e97d6;
+    border-color: #6e97d6;
   }
 
 /* Error section styles */
@@ -251,6 +269,8 @@ a:hover{
     margin-right: 0.2em;
     width: auto;
     border: 1px dotted lightsalmon;
+    position: relative;
+    top: .3em;
 }
 .legend-container .legend-row{
     display: flex;
@@ -417,7 +437,8 @@ a:hover{
     display: flex;
     width: 100vw;
     min-height: 100vh;
-    background-color: #5f6982;
+    /* background-color: #5f6982; */
+    background-color: #1e2433;
 }
 .job-box{
     margin-right: 1em;
@@ -507,9 +528,8 @@ a:hover{
 /* VERSION 2 - ONE PAGE STYLE MIND */
 /* =============================== */
 .uploader-zone{
-  /* height: 7em; */
-  background-color: #5f6982;
-  /* background-color: red; */
+  /* background-color: #5f6982; */
+  background-color: #1e2433;
 }
 .uploader-zone .form-container{
   flex-wrap: nowrap;
@@ -561,7 +581,8 @@ a:hover{
   display: none !important;
 }
 .makespan{
-  background-color: #5f6982;
+  /* background-color: #5f6982; */
+  background-color: #1e2433;
   text-align: center;
   padding: 0.5em 0;
 }
@@ -572,4 +593,28 @@ a:hover{
 }
 .makespan{
   display: none;
+}
+#helpBtn{
+  display: none;
+}
+
+
+/* =============================== */
+/* VERSION 3 - GITHUB EMBEDCODE */
+/* =============================== */
+.github-embed-nav-on-github{
+  color: blue !important;
+}
+.github-embed-footer a{
+  color: rgb(255, 193, 86) !important;
+}
+.margin-arrond--5{
+  margin: .5em;
+}
+.github-embed-nav a{
+  color: #000;
+  font-weight: bold;
+}
+.github-embed-nav-link-shown{
+  color: #dc3545 !important;
 }

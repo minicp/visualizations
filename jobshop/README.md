@@ -1,14 +1,6 @@
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="">
-    <img src="" alt="Logo" width="80" height="80">
-  </a>
-
-<h3 align="center">JOBSHOP-VISUALISATION</h3>
-A simple web tool for jobshop visualization.
-</div>
+# JOBSHOP-VISUALISATION
+A simple web tool for jobshop visualization. To perform a visualization, you must upload or click and drag two files on the interface. One the problem file and the other the solution file.
 
 
 ## File format

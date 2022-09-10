@@ -282,7 +282,7 @@ function makeMachineColors(nMachine) {
     for(let i=0; i < nMachine; i++) {
         while(1) {
             let color = randomColorGenerator();
-            if(!colors.includes(color) && color != '#5f6982' && color != "#000" && color != "#aaa5a5" && color != "#fff") {
+            if(!colors.includes(color) && color != '#5f6982' && color != "#000" && color != "#aaa5a5" && color != "#fff" && color != "#1e2433") {
                 colors.push(color);
                 break;
             }
