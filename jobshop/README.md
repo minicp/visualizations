@@ -1,6 +1,8 @@
 
 # JOBSHOP-VISUALISATION
-A simple web tool for jobshop visualization. To perform a visualization, you must upload or click and drag two files on the interface. One the problem file and the other the solution file.
+A simple web-based tool for jobshop visualization. 
+You have to upload (or drag and drop) two files on the interface, 
+one for the problem and the second one for the solution.
 
 
 ## File format
