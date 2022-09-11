@@ -5,6 +5,7 @@ You have to upload (or drag-and-drop) two files on the interface:
 1. the problem input file to setup the visualization and
 2. the solution file to visualize it.
 
+We describe bellow the format of each type of file.
 
 ## File format
 
