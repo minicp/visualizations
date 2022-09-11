@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jobshop - Readme</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="./vendor/css/github-embed.css">
+        <link rel="stylesheet" href="./vendor/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="margin-arrond--5">
+            <button onclick="history.back(-1)" class="btn" title="Go back"><i class="fa fa-arrow-left"></i></button>
+            <button class="btn"><i class="fa fa-chart"></i>&nbsp;JOBSHOP HELPER PAGE</button>
+        </div>
+        <div id="helper" style="height:100vh;width:97vw;margin:auto;"></div>
+    </body>
+    <!-- dependecies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.23.0/polyfill.min.js"></script>
+    <script src="./vendor/github-embed.min.js"></script>
+    <script>
+        githubEmbed('#helper', {
+            "owner": "minicp",
+            "repo": "visualizations",
+            "ref": "master",
+            "embed": [
+                {
+                    "label": "README",
+                    "path": "jobshop/README.md"
+                },
+                {
+                    "type": "htmlpage",
+                    "label": "TEST FILES",
+                    "path": 'jobshop/sample_files.html'
+                }
+            ]
+        });
+    </script>
+    <!-- ----------- -->
+</html>
